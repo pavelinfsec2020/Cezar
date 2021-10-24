@@ -24,7 +24,7 @@ namespace Laba_1
             while(true)
             {
                 //печатаем меню комманд
-                printMenu();
+                PrintMenu();
                 int command;
                 //вводим номер нужной команды. Если введено не число, TryParse не передаст значение по ссылке в переменную command
                 Int32.TryParse(Console.ReadLine(), out command);
@@ -99,7 +99,7 @@ namespace Laba_1
                 return false;
             }
         }
-        private static void printMenu()
+        private static void PrintMenu()
         {
             Console.WriteLine(
                 " \n Выберите операцию:" +
@@ -229,7 +229,7 @@ namespace Laba_1
                 }
             return maxIndex;
         }
-        public int TryCrackCezar(string encryptedText, string referenceText)
+        internal int TryCrackCezar(string encryptedText, string referenceText)
         {
             int possibleKey;
             //вызываем метод, определяющий сколько раз встречается каждая букву,принадлежащая заданному алфавиту из зашифрованного текста
